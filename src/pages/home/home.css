@@ -1,10 +1,31 @@
 .home_container {
+}
+.hero {
   display: flex;
   justify-content: space-between;
   background-color: rgba(226, 222, 222, 0.4);
-  padding: 20px 20px 20px 100px;
+  padding: 10px 100px 10px 100px;
 }
-/* .home_container img {
-  width: 620px;
-  max-height: 650px;
-} */
+.hero img {
+  width: 700px;
+  height: 750px;
+}
+.hero_text {
+  margin-top: 150px;
+  font-size: 50px;
+}
+.stock_items {
+  margin-top: 100px;
+  padding: 10px 100px 10px 100px;
+}
+.best_selling_items_container {
+  background-color: rgba(226, 222, 222, 0.4);
+  margin-top: 100px;
+}
+.best_selling_items {
+  padding: 70px 100px 10px 100px;
+}
+.best_selling_text {
+  font-size: 50px;
+  margin-bottom: 20px;
+}

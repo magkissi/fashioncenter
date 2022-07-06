@@ -24,9 +24,19 @@ function ItemDetail({ itemDetailImage, itemDetailDescription }) {
   const handleDecrement = () => {};
   return (
     <div className="item_detail_container">
-      <div className="item_image">
-        <img src={itemDetailImage} alt={itemDetailDescription} />
+      <div className="image_detail">
+        <div className="image_front">
+          <img src="/home-dress.jpg" alt={itemDetailDescription} />
+        </div>
+        <div className="image_back">
+          <img src="/home-dress.jpg" alt={itemDetailDescription} />
+        </div>
       </div>
+
+      <div className="main_image">
+        <img src="/home-dress.jpg" alt={itemDetailDescription} />
+      </div>
+
       <div className="item_detail">
         <p className="item_detail_path">Home / Shearling jacket</p>
         <span className="item_detail_title">Shearling jacket</span>
@@ -49,48 +59,49 @@ function ItemDetail({ itemDetailImage, itemDetailDescription }) {
           </div>
           <div className="add_to_wish">wicon</div>
         </div>
-      </div>
-      <div className="item_detail_buy">
-        <Button
-          text="BUY IT NOW"
-          buttonType="filled"
-          handleClick={handleBuyNow}
-        />
-      </div>
-      <p className="item_detail_description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry’s standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen.
-      </p>
-      <div>
-        <ItemSpecs />
-        <ItemSpecs />
-        <ItemSpecs />
-        <ItemSpecs />
-        <ItemSpecs />
-      </div>
-      <div className="item_detail_social_media">
-        <SocialMedia />
-        <SocialMedia />
-        <SocialMedia />
-        <SocialMedia />
-      </div>
-      {showItemSummary ? (
-        <div>
-          <CartItem
-            handleContinueShopping={handleShopping}
-            handleProceedToCart={handleProceed}
-            handleItemSummary={() => setShowItemSummary(false)}
-            cartItemImage=""
-            cartItemTitle="Long dress"
-            itemQty="2"
-            itemSubTotal="500.00"
+
+        <div className="item_detail_buy">
+          <Button
+            text="BUY IT NOW"
+            buttonType="filled"
+            handleClick={handleBuyNow}
           />
         </div>
-      ) : (
-        ""
-      )}
+        <p className="item_detail_description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry’s standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen.
+        </p>
+        <div>
+          <ItemSpecs />
+          <ItemSpecs />
+          <ItemSpecs />
+          <ItemSpecs />
+          <ItemSpecs />
+        </div>
+        <div className="item_detail_social_media">
+          <SocialMedia />
+          <SocialMedia />
+          <SocialMedia />
+          <SocialMedia />
+        </div>
+        {showItemSummary ? (
+          <div>
+            <CartItem
+              handleContinueShopping={handleShopping}
+              handleProceedToCart={handleProceed}
+              handleItemSummary={() => setShowItemSummary(false)}
+              cartItemImage=""
+              cartItemTitle="Long dress"
+              itemQty="2"
+              itemSubTotal="500.00"
+            />
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 }

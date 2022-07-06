@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
 
-function Card({ cardImage, title, itemCount }) {
+function StockCard({ cardImage, title, itemCount }) {
   return (
     <div className="card_container">
       <img src={cardImage} alt={title} />
@@ -13,4 +13,4 @@ function Card({ cardImage, title, itemCount }) {
   );
 }
 
-export default Card;
+export default StockCard;

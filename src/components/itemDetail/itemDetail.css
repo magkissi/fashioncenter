@@ -1,7 +1,29 @@
 .item_detail_container {
+  display: flex;
+  padding: 40px 80px 40px 80px;
+}
+.image_detail {
+  width: 350px;
+  margin-right: 20px;
+}
+.image_detail img {
+  width: 100%;
+  height: 150px;
+}
+.image_front {
+  margin-bottom: 20px;
+}
+.main_image {
   border: 1px solid #e0d3d3;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 20px;
+  margin-right: 40px;
+}
+/* .item_detail {
+  
+} */
+.main_image img {
+  height: 750px;
+  width: 600px;
 }
 
 .item_detail_buttons,
