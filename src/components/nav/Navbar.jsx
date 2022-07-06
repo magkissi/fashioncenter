@@ -23,16 +23,16 @@ function Navbar() {
       </div>
       <div className="icons">
         <span>
-          <img src="../../utilities/icons8-search-50.png" />
+          <img src="/search-icon.png" alt="search-icon" />
         </span>
         <span>
-          <img src="../../utilities/icons8-search-50.png" />
+          <img src="/avatar.png" alt="avatar-icon" />
         </span>
         <span>
-          <img src="../../utilities/icons8-search-50.png" />
+          <img src="/heart-icon.png" alt="wish-icon" />
         </span>
         <span>
-          <img src="../../utilities/icons8-search-50.png" />
+          <img src="/cart-icon.png" alt="cart-icon" />
         </span>
       </div>
     </div>

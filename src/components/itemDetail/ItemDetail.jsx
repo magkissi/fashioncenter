@@ -8,7 +8,7 @@ import CartItem from "../cartItem/CartItem";
 import { increment } from "../../appStore/slides/counterSlide";
 import { useSelector, useDispatch } from "react-redux";
 
-function ItemDetail({ itemDetailImage, itemDetailDescription }) {
+function ItemDetail({ itemDetailDescription }) {
   const [showItemSummary, setShowItemSummary] = useState(false);
   const itemCount = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
@@ -57,7 +57,9 @@ function ItemDetail({ itemDetailImage, itemDetailDescription }) {
               handleClick={handleAddToCart}
             />
           </div>
-          <div className="add_to_wish">wicon</div>
+          <div className="add_to_wish">
+            <img src="/heart-icon.png" alt="wish-icon" />
+          </div>
         </div>
 
         <div className="item_detail_buy">
@@ -81,10 +83,10 @@ function ItemDetail({ itemDetailImage, itemDetailDescription }) {
           <ItemSpecs />
         </div>
         <div className="item_detail_social_media">
-          <SocialMedia />
-          <SocialMedia />
-          <SocialMedia />
-          <SocialMedia />
+          <SocialMedia mediaImage="/facebook.png" mediaName="facebook" />
+          <SocialMedia mediaImage="/instagram.png" mediaName="instagram" />
+          <SocialMedia mediaImage="/twitter.png" mediaName="twitter" />
+          <SocialMedia mediaImage="/whatsapp.png" mediaName="whatsapp" />
         </div>
         {showItemSummary ? (
           <div>

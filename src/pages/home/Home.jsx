@@ -33,7 +33,6 @@ const Home = () => {
               cartImage="/home-dress.jpg"
               cartDescription="sdfghj"
               price="123"
-              icon="**"
               handleCartImage={() => navigate(`/itemDetail/123`)}
             />
           </div>

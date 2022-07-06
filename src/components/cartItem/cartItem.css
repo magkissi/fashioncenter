@@ -10,6 +10,7 @@
   display: flex;
   padding: 20px;
 }
+
 .cart_item img {
   border: 1px solid pink;
   width: 100px;
@@ -20,9 +21,12 @@
   flex-direction: column;
   margin-left: 10px;
 }
+.cart_card_icon img {
+  width: 18px;
+}
 .cart_item_buttons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   border-top: 1px solid lightgray;
   margin-left: 5px;
   margin-right: 5px;
