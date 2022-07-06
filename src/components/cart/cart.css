@@ -1,0 +1,13 @@
+.cart_title {
+  text-align: center;
+}
+.cart_headings,
+.cart_details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.cart_headings {
+  border-bottom: 1px solid lightgray;
+}

@@ -1,0 +1,17 @@
+.api-image {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.api-container {
+  display: flex;
+  margin: 5px;
+}
+
+.api-image img {
+  max-height: 350px;
+  width: 100%;
+}
