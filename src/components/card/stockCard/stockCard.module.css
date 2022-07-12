@@ -1,0 +1,25 @@
+.card_container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+.card_container img {
+  width: 320px;
+  cursor: pointer;
+}
+.card_details {
+  display: flex;
+  align-items: baseline;
+  padding-top: 15px;
+  line-height: 48px;
+}
+.card_title {
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 32px;
+  color: #2c2c2c;
+  cursor: pointer;
+}
+.card_item_count {
+  font-size: 15px;
+}

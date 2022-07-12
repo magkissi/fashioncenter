@@ -31,9 +31,10 @@ function Navbar() {
         <span>
           <img src="/heart-icon.png" alt="wish-icon" />
         </span>
-        <span>
+        <div className="cart_icon_container">
+          <div className="cart_count">1</div>
           <img src="/cart-icon.png" alt="cart-icon" />
-        </span>
+        </div>
       </div>
     </div>
   );

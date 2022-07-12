@@ -1,11 +1,8 @@
-.home_container {
-  /* margin-top: 90px; */
-}
 .hero {
   display: flex;
   justify-content: space-between;
   background-color: rgba(226, 222, 222, 0.4);
-  padding: 10px 100px 10px 100px;
+  padding: 10px 80px 10px 80px;
 }
 .hero img {
   width: 700px;
@@ -17,16 +14,21 @@
 }
 .stock_items {
   margin-top: 100px;
-  padding: 10px 100px 10px 100px;
+  padding: 10px 80px 10px 80px;
 }
 .best_selling_items_container {
   background-color: rgba(226, 222, 222, 0.4);
   margin-top: 100px;
 }
 .best_selling_items {
-  padding: 70px 100px 10px 100px;
+  padding: 70px 80px 10px 80px;
 }
 .best_selling_text {
   font-size: 50px;
   margin-bottom: 20px;
+}
+.home_stock_container,
+.home_selling_container {
+  display: flex;
+  justify-content: space-between;
 }

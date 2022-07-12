@@ -1,0 +1,25 @@
+input {
+  height: 40px;
+  border: 1px solid rgb(231, 228, 228);
+  padding: 5px;
+}
+.shipment_details {
+  padding: 15px;
+}
+.shipment_origin input {
+  width: 450px;
+}
+.shipment_origin {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.shipment_address {
+  width: 947px;
+}
+.title {
+  text-align: center;
+  border-bottom: 1px solid rgb(231, 228, 228);
+  margin-top: 15px;
+}

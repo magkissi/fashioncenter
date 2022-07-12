@@ -1,6 +1,7 @@
 .item_detail_container {
   display: flex;
   padding: 40px 80px 40px 80px;
+  position: relative;
 }
 .image_detail {
   width: 350px;
@@ -109,4 +110,12 @@
 .item_detail_social_media {
   margin-top: 20px;
   display: flex;
+}
+.item_summary {
+  position: absolute;
+  left: 500px;
+  top: 220px;
+  background-color: whitesmoke;
+  border: none;
+  /* z-index: 20; */
 }

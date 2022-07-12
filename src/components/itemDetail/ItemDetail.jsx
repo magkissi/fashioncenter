@@ -7,11 +7,14 @@ import Button from "../common/button/Button";
 import CartItem from "../cartItem/CartItem";
 import { increment } from "../../appStore/slides/counterSlide";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function ItemDetail({ itemDetailDescription }) {
   const [showItemSummary, setShowItemSummary] = useState(false);
   const itemCount = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const handleAddToCart = () => {
     setShowItemSummary(true);
@@ -19,6 +22,7 @@ function ItemDetail({ itemDetailDescription }) {
   const handleBuyNow = () => {};
   const handleShopping = () => {
     setShowItemSummary(false);
+    navigate(`/`);
   };
   const handleProceed = () => {};
   const handleDecrement = () => {};
@@ -89,7 +93,7 @@ function ItemDetail({ itemDetailDescription }) {
           <SocialMedia mediaImage="/whatsapp.png" mediaName="whatsapp" />
         </div>
         {showItemSummary ? (
-          <div>
+          <div className="item_summary">
             <CartItem
               handleContinueShopping={handleShopping}
               handleProceedToCart={handleProceed}

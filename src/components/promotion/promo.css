@@ -1,0 +1,56 @@
+.promo_container {
+  display: flex;
+
+  padding: 70px 80px 10px 80px;
+}
+.current_discount,
+.next_discount {
+  background-color: rgba(226, 222, 222, 0.4);
+  height: 450px;
+}
+.next_discount {
+  width: 400px;
+}
+.current_discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-right: 40px;
+}
+.promo_details {
+  width: 300px;
+  margin-left: 50px;
+  text-align: center;
+}
+.promo_image {
+  height: 450px;
+}
+.promo_image img {
+  width: 400px;
+  height: 100%;
+}
+.promo_discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.8;
+}
+.percentage {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  line-height: 0.8;
+}
+.discount_value {
+  font-size: 100px;
+}
+.promo_details_text2 {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 0.5;
+}
+.promo_details_text1 {
+  font-size: 30px;
+  font-weight: 300;
+}

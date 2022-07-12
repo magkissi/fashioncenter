@@ -1,0 +1,23 @@
+.cart_details_container {
+  display: flex;
+  height: 120px;
+  margin-top: 5px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  border-bottom: 1px solid rgb(231, 228, 228);
+}
+.cart_description {
+  display: flex;
+}
+.cart_description img {
+  width: 60px;
+  margin-right: 8px;
+}
+.cart_qty {
+  border: 1px solid rgb(231, 228, 228);
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
