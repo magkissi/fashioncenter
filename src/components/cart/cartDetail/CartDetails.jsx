@@ -8,6 +8,9 @@ function CartDetails({
   unitPrice,
   itemQty,
   totalAmount,
+  handleDecrement,
+  handleIncrement,
+  deleteItem,
 }) {
   return (
     <div className={styles.cart_details_container}>
@@ -22,12 +25,18 @@ function CartDetails({
       </div>
       <div className="cart_unit_price">{unitPrice}</div>
       <div className={styles.cart_qty}>
-        <span>-</span>
-        <span>{itemQty}</span>
-        <span>+</span>
+        <div className={styles.decrease_icon} onClick={handleDecrement}>
+          -
+        </div>
+        <div>{itemQty}</div>
+        <div className={styles.increase_icon} onClick={handleIncrement}>
+          +
+        </div>
       </div>
       <div className="">{totalAmount}</div>
-      <div className="">X</div>
+      <div className={styles.delete_icon} onClick={deleteItem}>
+        X
+      </div>
     </div>
   );
 }

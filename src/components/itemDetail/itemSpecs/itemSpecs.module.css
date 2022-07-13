@@ -1,0 +1,11 @@
+.item_specs_container {
+  display: flex;
+}
+.specs {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.specs_value,
+.specs {
+  color: #707070;
+}

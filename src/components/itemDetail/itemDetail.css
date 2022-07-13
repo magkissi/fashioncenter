@@ -37,12 +37,7 @@
 .item_count {
   margin-right: 5px;
 }
-.item_detail_review img {
-  width: 15px;
-}
-.review {
-  margin-left: 5px;
-}
+
 .item_count button,
 .item_count div,
 .add_to_wish {
@@ -68,8 +63,7 @@
 .add_item_to_cart {
   flex: 1;
 }
-.item_detail_path,
-.item_detail_review {
+.item_detail_path {
   color: #707070;
   font-size: 16px;
 }
@@ -85,28 +79,7 @@
 .item_detail_title {
   font-size: 28px;
 }
-.item_specs_container {
-  display: flex;
-}
-.specs {
-  margin-left: 10px;
-  margin-right: 5px;
-}
-.specs_value,
-.specs {
-  color: #707070;
-}
-.social_media_logo {
-  width: 40px;
-  height: 40px;
 
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.social_media_logo img {
-  width: 30px;
-  cursor: pointer;
-}
 .item_detail_social_media {
   margin-top: 20px;
   display: flex;

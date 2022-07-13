@@ -21,3 +21,8 @@
   justify-content: space-between;
   padding: 6px;
 }
+.decrease_icon,
+.increase_icon,
+.delete_icon {
+  cursor: pointer;
+}

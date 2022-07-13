@@ -51,6 +51,7 @@
   align-items: center;
   position: relative;
   width: 26px;
+  cursor: pointer;
 }
 .cart_count {
   position: absolute;

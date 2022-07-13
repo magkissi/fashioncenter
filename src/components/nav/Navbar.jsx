@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./nav.css";
+import { Link, useNavigate } from "react-router-dom";
+import styles from "./nav.module.css";
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
-    <div className="nav_container">
-      <div className="curency">GHC</div>
-      <div className="left_list">
+    <div className={styles.nav_container}>
+      <div className={styles.curency}>GHC</div>
+      <div className={styles.left_list}>
         <div>
           <Link to="/">Home</Link>
         </div>
@@ -15,13 +16,13 @@ function Navbar() {
         </div>
         <div>Product</div>
       </div>
-      <div className="logo">logo</div>
-      <div className="right_list">
+      <div className={styles.logo}>logo</div>
+      <div className={styles.right_list}>
         <span>Pages</span>
         <span>Elements</span>
         <span>Blog</span>
       </div>
-      <div className="icons">
+      <div className={styles.icons}>
         <span>
           <img src="/search-icon.png" alt="search-icon" />
         </span>
@@ -31,8 +32,11 @@ function Navbar() {
         <span>
           <img src="/heart-icon.png" alt="wish-icon" />
         </span>
-        <div className="cart_icon_container">
-          <div className="cart_count">1</div>
+        <div
+          className={styles.cart_icon_container}
+          onClick={() => navigate(`/cart`)}
+        >
+          <div className={styles.cart_count}>1</div>
           <img src="/cart-icon.png" alt="cart-icon" />
         </div>
       </div>

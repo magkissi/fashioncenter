@@ -1,23 +1,36 @@
 import React, { useState } from "react";
 import "./itemDetail.css";
-import ItemSpecs from "./ItemSpecs";
-import Review from "./Review";
-import SocialMedia from "./SocialMedia";
+import ItemSpecs from "./itemSpecs";
+import Review from "./review";
+import SocialMedia from "./socialMedia";
 import Button from "../common/button/Button";
 import CartItem from "../cartItem/CartItem";
-import { increment } from "../../appStore/slides/counterSlide";
-import { useSelector, useDispatch } from "react-redux";
+
+import { addToCart } from "../../appStore/slides/cart";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function ItemDetail({ itemDetailDescription }) {
   const [showItemSummary, setShowItemSummary] = useState(false);
-  const itemCount = useSelector((state) => state.counter.count);
+  const [itemQuantity, setItemQuantity] = useState(0);
+  //const itemCount = useSelector((state) => state.counter.count);
+  //const cartProducts = useSelector((state) => state.cart.product);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
   const handleAddToCart = () => {
     setShowItemSummary(true);
+
+    const payload = {
+      image: "/home-dress.jpg",
+      title: "long brown lace dress",
+      review: "2",
+      unitPrice: "GHC 200",
+      quantity: itemQuantity,
+    };
+
+    dispatch(addToCart(payload));
   };
   const handleBuyNow = () => {};
   const handleShopping = () => {
@@ -25,7 +38,21 @@ function ItemDetail({ itemDetailDescription }) {
     navigate(`/`);
   };
   const handleProceed = () => {};
-  const handleDecrement = () => {};
+  const handleDecrement = () => {
+    if (itemQuantity == 0) {
+      return;
+    }
+    setItemQuantity((prevQty) => {
+      let quantity = prevQty - 1;
+      return quantity;
+    });
+  };
+  const handleIncrement = () => {
+    setItemQuantity((prevQty) => {
+      let quantity = prevQty + 1;
+      return quantity;
+    });
+  };
   return (
     <div className="item_detail_container">
       <div className="image_detail">
@@ -51,8 +78,8 @@ function ItemDetail({ itemDetailDescription }) {
         <div className="item_detail_buttons">
           <div className="item_count">
             <button onClick={handleDecrement}>-</button>
-            <div>{itemCount}</div>
-            <button onClick={() => dispatch(increment())}>+</button>
+            <div>{itemQuantity}</div>
+            <button onClick={handleIncrement}>+</button>
           </div>
           <div className="add_item_to_cart">
             <Button
@@ -80,11 +107,7 @@ function ItemDetail({ itemDetailDescription }) {
           scrambled it to make a type specimen.
         </p>
         <div>
-          <ItemSpecs />
-          <ItemSpecs />
-          <ItemSpecs />
-          <ItemSpecs />
-          <ItemSpecs />
+          <ItemSpecs value="value" />
         </div>
         <div className="item_detail_social_media">
           <SocialMedia mediaImage="/facebook.png" mediaName="facebook" />
@@ -100,7 +123,7 @@ function ItemDetail({ itemDetailDescription }) {
               handleItemSummary={() => setShowItemSummary(false)}
               cartItemImage=""
               cartItemTitle="Long dress"
-              itemQty="2"
+              itemQty={itemQuantity}
               itemSubTotal="500.00"
             />
           </div>

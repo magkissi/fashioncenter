@@ -1,9 +1,9 @@
 import React from "react";
-import "./itemDetail.css";
+import styles from "./socialMedia.module.css";
 
 function SocialMedia({ mediaImage, mediaName }) {
   return (
-    <div className="social_media_logo">
+    <div className={styles.social_media_logo}>
       <img src={mediaImage} alt={mediaName} />
     </div>
   );
