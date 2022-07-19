@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slides/counterSlide";
+
 import cartReducer from "./slides/cart";
 import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { shopApi } from "../api/apiSlice/starterApi";
@@ -8,7 +8,6 @@ import { stockItems } from "../api/apiSlice/stockItems";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     cart: cartReducer,
     [shopApi.reducerPath]: shopApi.reducer,
     [bestSellingItems.reducerPath]: bestSellingItems.reducer,
@@ -22,5 +21,5 @@ export const store = configureStore({
       stockItems.middleware
     ),
 });
-
+console.log("---store", store.getState().cart);
 setupListeners(store.dispatch);

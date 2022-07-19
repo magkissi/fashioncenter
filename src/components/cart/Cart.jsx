@@ -4,33 +4,38 @@ import CartDetails from "./cartDetail";
 import Button from "../common/button/Button";
 import Shipment from "./shipment";
 import Checkout from "./checkout";
-import { incProductQty, decProductQty } from "../../appStore/slides/cart";
+import {
+  incProductQty,
+  decProductQty,
+  deleteCartItem,
+} from "../../appStore/slides/cart";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const [orderNotes, setOrderNotes] = useState("");
   const cartProducts = useSelector((state) => state.cart.products);
+
+  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   const handleClearCart = () => {};
   const handleAddNote = (e) => {
     setOrderNotes(e.target.value);
     console.log("---notes", orderNotes);
   };
-  const handleCheckoutButton = (payload) => {
-    console.log("----payload", payload);
-  };
+  // const handleCheckoutButton = () => {
+  //   dispatch(totalCartItems());
+  // };
   const handleCartItemIncrease = (itemIdx) => {
     dispatch(incProductQty(itemIdx));
   };
   const handleCartItemDecrease = (itemIdx) => {
     dispatch(decProductQty(itemIdx));
   };
-  const handleDeleteItem = (index) => {
-    const filteredCart = cartProducts.filter((item, idx) => {
-      return item.payload.quantity != 3;
-    });
-    console.log("filt", filteredCart);
-    console.log("--product", cartProducts);
+  const handleDeleteItem = (id) => {
+    dispatch(deleteCartItem(id));
+    console.log("----idd", id);
   };
   return (
     <div className="cart_container">
@@ -53,7 +58,7 @@ function Cart() {
                 unitPrice={item.unitPrice}
                 itemQty={item.quantity}
                 totalAmount="GHC 1000"
-                deleteItem={() => handleDeleteItem(idx)}
+                deleteItem={() => handleDeleteItem(item.id)}
                 handleIncrement={() => handleCartItemIncrease(idx)}
                 handleDecrement={() => handleCartItemDecrease(idx)}
               />
@@ -85,7 +90,7 @@ function Cart() {
             subTotal="1500"
             total="2000"
             deliveryCost="500"
-            handleCheckout={handleCheckoutButton}
+            handleCheckout={() => navigate(`/payment`)}
           />
         </div>
       </section>

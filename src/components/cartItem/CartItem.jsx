@@ -1,18 +1,17 @@
 import React from "react";
 import Button from "../common/button/Button";
 import "./cartItem.css";
-import { useSelector } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 
 function CartItem({
   handleContinueShopping,
-
+  itemQty,
   cartItemImage,
   cartItemTitle,
 
   handleItemSummary,
 }) {
-  const itemQty = useSelector((state) => state.counter.count);
   const navigate = useNavigate();
   return (
     <div className="cart_item_container">

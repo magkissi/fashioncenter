@@ -23,6 +23,7 @@ function ItemDetail({ itemDetailDescription }) {
     setShowItemSummary(true);
 
     const payload = {
+      id: itemQuantity,
       image: "/home-dress.jpg",
       title: "long brown lace dress",
       review: "2",

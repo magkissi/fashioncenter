@@ -1,9 +1,13 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./nav.module.css";
+import { useSelector } from "react-redux";
+import { totalCartItems } from "../../appStore/slides/cart";
 
 function Navbar() {
   const navigate = useNavigate();
+  // const cartProducts = useSelector((state) => state.cart.products);
+  const count = useSelector(totalCartItems);
   return (
     <div className={styles.nav_container}>
       <div className={styles.curency}>GHC</div>
@@ -36,7 +40,7 @@ function Navbar() {
           className={styles.cart_icon_container}
           onClick={() => navigate(`/cart`)}
         >
-          <div className={styles.cart_count}>1</div>
+          <div className={styles.cart_count}>{count}</div>
           <img src="/cart-icon.png" alt="cart-icon" />
         </div>
       </div>
