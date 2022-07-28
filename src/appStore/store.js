@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import cartReducer from "./slides/cart";
+import cartReducer from "./slice/cart";
 import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { shopApi } from "../api/apiSlice/starterApi";
 import { bestSellingItems } from "../api/apiSlice/bestSelling";

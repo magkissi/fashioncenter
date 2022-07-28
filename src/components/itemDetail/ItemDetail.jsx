@@ -6,22 +6,20 @@ import SocialMedia from "./socialMedia";
 import Button from "../common/button/Button";
 import CartItem from "../cartItem/CartItem";
 
-import { addToCart } from "../../appStore/slides/cart";
-import { useDispatch } from "react-redux";
+import { addToCart } from "../../appStore/slice/cart";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function ItemDetail({ itemDetailDescription }) {
   const [showItemSummary, setShowItemSummary] = useState(false);
-  const [itemQuantity, setItemQuantity] = useState(0);
+  const [itemQuantity, setItemQuantity] = useState(1);
   //const itemCount = useSelector((state) => state.counter.count);
-  //const cartProducts = useSelector((state) => state.cart.product);
+  const cartProducts = useSelector((state) => state.cart.product);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
   const handleAddToCart = () => {
-    setShowItemSummary(true);
-
     const payload = {
       id: itemQuantity,
       image: "/home-dress.jpg",
@@ -31,7 +29,17 @@ function ItemDetail({ itemDetailDescription }) {
       quantity: itemQuantity,
     };
 
-    dispatch(addToCart(payload));
+    if (!!cartProducts) {
+      cartProducts.forEach((product) => {
+        if (product.image == payload.image) {
+          console.log("item already exist");
+        }
+      });
+    } else {
+      setShowItemSummary(true);
+
+      dispatch(addToCart(payload));
+    }
   };
   const handleBuyNow = () => {};
   const handleShopping = () => {

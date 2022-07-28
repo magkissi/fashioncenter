@@ -6,6 +6,7 @@ import Shop from "./pages/shop";
 import Cart from "./components/cart/Cart";
 import ItemDetail from "./components/itemDetail/ItemDetail";
 import Payment from "./components/payment/Payment";
+import Footer from "./components/footer/Footer";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           <Route path="/itemDetail/:id" element={<ItemDetail />} />
           <Route path="/payment" element={<Payment />} />
         </Routes>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

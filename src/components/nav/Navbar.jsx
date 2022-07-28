@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./nav.module.css";
 import { useSelector } from "react-redux";
-import { totalCartItems } from "../../appStore/slides/cart";
+import { totalCartItems } from "../../appStore/slice/cart";
 
 function Navbar() {
   const navigate = useNavigate();

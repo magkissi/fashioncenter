@@ -1,0 +1,59 @@
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px 150px 80px;
+}
+
+.title {
+  font-size: 24px;
+}
+p {
+  font-size: 12px;
+}
+.sub_title:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.sign_up {
+  width: 500px;
+}
+input {
+  width: 100%;
+}
+.insta_icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+img {
+  cursor: pointer;
+}
+.copy_right {
+  font-size: 12px;
+  color: rgb(141, 136, 136);
+  text-align: center;
+}
+.media_handles img {
+  width: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .footer_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  input {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sign_up {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer_container {
+    padding: 10px 80px 150px 20px;
+  }
+}

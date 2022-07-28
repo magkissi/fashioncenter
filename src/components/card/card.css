@@ -36,3 +36,22 @@
 .cart_description:hover {
   color: #2c2c2c;
 }
+@media only screen and (max-width: 768px) {
+  .cart_card_container {
+    width: 100%;
+    font-size: 5px;
+    display: flex;
+    overflow-x: scroll;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cart_card_details_container,
+  .cart_card_container img {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cart_card_icon img {
+    width: 15px;
+  }
+}

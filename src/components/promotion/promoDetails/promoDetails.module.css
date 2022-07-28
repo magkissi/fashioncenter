@@ -1,0 +1,57 @@
+.promo_details {
+  width: 300px;
+  margin-left: 50px;
+  text-align: center;
+}
+.promo_discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.8;
+}
+.percentage {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  line-height: 0.8;
+}
+.discount_value {
+  font-size: 100px;
+}
+.promo_details_text2 {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 0.5;
+}
+.promo_details_text1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.promo_btn {
+  margin-top: 30px;
+  width: 100px;
+  align-content: center;
+  margin-left: 80px;
+}
+@media only screen and (max-width: 768px) {
+  .percentage {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .discount_value,
+  .promo_details_text2 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .promo_btn {
+    margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .promo_details {
+    width: 180px;
+    margin-left: 5px;
+  }
+}

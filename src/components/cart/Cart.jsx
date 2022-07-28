@@ -8,7 +8,7 @@ import {
   incProductQty,
   decProductQty,
   deleteCartItem,
-} from "../../appStore/slides/cart";
+} from "../../appStore/slice/cart";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
