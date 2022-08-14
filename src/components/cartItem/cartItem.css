@@ -43,3 +43,8 @@
 .cart_item_close {
   cursor: pointer;
 }
+@media only screen and (max-width: 768px) {
+  .cart_item_container {
+    width: 100%;
+  }
+}

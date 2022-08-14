@@ -63,7 +63,7 @@ function ItemDetail({ itemDetailDescription }) {
     });
   };
   return (
-    <div className="item_detail_container">
+    <div className="">
       <div className="image_detail">
         <div className="image_front">
           <img src="/home-dress.jpg" alt={itemDetailDescription} />

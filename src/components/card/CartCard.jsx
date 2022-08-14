@@ -8,7 +8,12 @@ function CartCard({ cartImage, cartDescription, price, handleCartImage }) {
   return (
     <>
       <div className="cart_card_container">
-        <img src={cartImage} alt={cartDescription} onClick={handleCartImage} />
+        <img
+          className="image"
+          src={cartImage}
+          alt={cartDescription}
+          onClick={handleCartImage}
+        />
         <div className="cart_card_details_container">
           <div className="cart_card_details">
             <div className="cart_description">{cartDescription}</div>

@@ -5,6 +5,7 @@
 }
 .card_container img {
   width: 320px;
+  height: 400px;
   cursor: pointer;
 }
 .card_details {
